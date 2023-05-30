@@ -24,7 +24,6 @@ const routes: Routes = [
         },
         loadChildren: () => import('./pages/core/core.module').then((m) => m.CoreModule),
       },
-
     ],
   },
   {

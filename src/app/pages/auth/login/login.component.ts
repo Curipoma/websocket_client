@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Expressions} from "@shared/regular-expresions/expresions";
-import {AuthHttpService} from "@services/auth/auth-http.service";
+import {AuthHttpService} from "@services/auth/http/auth-http.service";
 import {LoginRequestModel} from "@models/auth";
 
 @Component({

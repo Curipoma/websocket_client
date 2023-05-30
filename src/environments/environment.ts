@@ -1,5 +1,5 @@
 const _domain = 'http://192.168.100.17:8000';
-const _host = _domain + '/api/'; // /api/v1/
+const _host = _domain + '/api/v1/';
 
 export const environment = {
   production: false,

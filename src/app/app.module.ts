@@ -12,7 +12,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "@shared/shared.module";
-import { BreadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
+import {BreadcrumbComponent} from './layout/breadcrumb/breadcrumb.component';
+import {HttpInterceptorProviders} from "./interceptors";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BreadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
     },
+    HttpInterceptorProviders,
   ],
   bootstrap: [AppComponent]
 })

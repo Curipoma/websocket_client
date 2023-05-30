@@ -8,12 +8,11 @@ import {Observable, tap} from "rxjs";
 import {catchError, map} from "rxjs/operators";
 import {ResponseHttpHandler} from "@exceptions";
 import {AuthService} from "@services/auth";
-import {IChat} from "@models/core/chat.model";
 
 @Injectable({
   providedIn: 'root',
 })
-export class ChatsHttpService extends AbstractHttpService<IChat> {
+export class MessagesHttpService extends AbstractHttpService<IMessage> {
   constructor(
     httpClient: HttpClient,
     coreService: CoreService,
@@ -24,17 +23,17 @@ export class ChatsHttpService extends AbstractHttpService<IChat> {
       httpClient,
       coreService,
       messageService,
-      'core/chats'
+      'core/messages'
     );
   }
 
-  chatsPerUser(
+  messagesPerUser(
     paginator: IPaginatorModel,
     params?: HttpParams,
     headers?: HttpHeaders,
   ): Observable<HttpResponse<IServerResponse<IMessage[]>>> {
     this.coreService.showLoad();
-    const url = `${this.API_DOMAIN}core/chats/${this.authService.user?.id}`;
+    const url = `${this.API_DOMAIN}core/messages/${this.authService.user?.id}`;
     return this.httpClient
       .get<IServerResponse<IMessage[]>>(
         url,

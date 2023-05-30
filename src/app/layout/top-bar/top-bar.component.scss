@@ -5,10 +5,18 @@
   width: 100%;
 
   & .top_bar_list_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
     list-style: none;
   }
 
   & .top_bar_list_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
     list-style: none;
   }
 }

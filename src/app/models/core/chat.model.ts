@@ -1,10 +1,10 @@
 import {IEntityModel} from "@models/common";
 
-export interface IMessage extends IEntityModel {
+export interface IChat extends IEntityModel {
   message: string;
 }
 
-export class Message implements IMessage {
+export class Chat implements IChat {
   constructor(
     public id: number,
     public createdAt: Date,

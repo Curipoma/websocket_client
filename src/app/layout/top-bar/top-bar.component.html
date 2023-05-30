@@ -1,10 +1,17 @@
 <nav class="top_bar">
   <ul class="top_bar_list_left">
-    <li></li>
+    <li>
+      {{authService.user?.name}}
+    </li>
   </ul>
   <ul class="top_bar_list_right">
     <li>
-      <button type="button" class="btn">
+      <button type="button" class="btn" (click)="backClicked()">
+        back
+      </button>
+    </li>
+    <li>
+      <button type="button" class="btn" (click)="logout()">
         Logout
       </button>
     </li>

@@ -9,7 +9,7 @@ import {CoreService} from "@services/core";
 import {MessageService} from "@services/common";
 import {environment} from "@env/environment";
 import {ILoginRequestModel, ILoginResponseModel, ILogoutResponseModel} from "@models/auth";
-import {AuthService} from "@services/auth/auth.service";
+import {AuthService} from "@services/auth/http/auth.service";
 
 @Injectable({
   providedIn: 'root',

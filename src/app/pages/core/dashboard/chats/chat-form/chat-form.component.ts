@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  templateUrl: './chat-form.component.html',
+  styleUrls: ['./chat-form.component.scss']
 })
-export class FormComponent {
+export class ChatFormComponent {
 
 }
