@@ -1,0 +1,42 @@
+<div class="login">
+  <form class="login_form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1 class="title">
+      Iniciar cesión
+    </h1>
+    <div class="field_login_form">
+      <label for="email" class="label_login_form">
+        email
+      </label>
+      <input id="email" name="email" type="email" class="input_login_form" placeholder="Escribe tu email"
+             formControlName="email">
+      <small
+        *ngIf="emailField.dirty || emailField.touched"
+        appErrorMessage
+        [errors]="emailField.errors"
+        [touched]="emailField.touched"
+        [dirty]="emailField.dirty"
+        class="text-red-600 bg-red-100 px-2 py-1 rounded"
+      >
+      </small>
+    </div>
+    <div class="field_login_form">
+      <label for="password" class="label_login_form">
+        email
+      </label>
+      <input id="password" name="password" type="password" class="input_login_form" placeholder="Escribe tu clave"
+             formControlName="password">
+      <small
+        *ngIf="passwordField.dirty || passwordField.touched"
+        appErrorMessage
+        [errors]="passwordField.errors"
+        [touched]="passwordField.touched"
+        [dirty]="passwordField.dirty"
+        class="text-red-600 bg-red-100 px-2 py-1 rounded"
+      >
+      </small>
+    </div>
+    <button type="submit" class="btn_submit">
+      Entrar
+    </button>
+  </form>
+</div>

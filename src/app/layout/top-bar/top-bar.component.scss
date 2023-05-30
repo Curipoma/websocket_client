@@ -1,0 +1,14 @@
+.top_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  & .top_bar_list_left {
+    list-style: none;
+  }
+
+  & .top_bar_list_right {
+    list-style: none;
+  }
+}
